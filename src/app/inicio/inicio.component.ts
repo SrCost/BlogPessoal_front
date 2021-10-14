@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    if(environment.token == ''){
+      alert('Sua sessão expirou, realizar o login novamente.')
+      this.router.navigate(['/entrar'])
+    }
   }
 
 }
