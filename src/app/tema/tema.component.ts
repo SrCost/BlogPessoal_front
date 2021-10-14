@@ -3,11 +3,11 @@ import { environment } from 'src/environments/environment.prod';
 import { Router } from '@angular/router'
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  selector: 'app-tema',
+  templateUrl: './tema.component.html',
+  styleUrls: ['./tema.component.css']
 })
-export class InicioComponent implements OnInit {
+export class TemaComponent implements OnInit {
 
   constructor(
     private router: Router
@@ -19,5 +19,6 @@ export class InicioComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
   }
-
 }
+
+
